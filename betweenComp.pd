@@ -1,0 +1,47 @@
+#N canvas 462 198 834 374 12;
+#X obj 253 75 netreceive 3001;
+#X obj 334 311 readsf~;
+#X obj 337 340 dac~;
+#X msg 244 234 start;
+#X obj 48 203 openpanel;
+#X obj 46 178 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 47 236 open \$1;
+#X obj 136 204 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 355 103 select 1 2 3;
+#X obj 352 186 t 1 b;
+#X msg 294 234 stop;
+#X msg 32 68 \; pd dsp \$1;
+#X obj 28 34 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X text 55 32 Turn on/off audio;
+#X msg 168 205 open 5.wav;
+#X msg 641 255 open 3.wav;
+#X obj 422 182 t 1 b;
+#X obj 485 187 t 1 b;
+#X msg 436 254 open 1.wav;
+#X msg 539 256 open 2.wav;
+#X connect 0 1 8 0;
+#X connect 1 0 2 0;
+#X connect 1 1 2 1;
+#X connect 3 0 1 0;
+#X connect 4 0 6 0;
+#X connect 5 0 4 0;
+#X connect 6 0 1 0;
+#X connect 7 0 1 0;
+#X connect 8 0 9 0;
+#X connect 8 1 16 0;
+#X connect 8 2 17 0;
+#X connect 9 0 1 0;
+#X connect 9 1 18 0;
+#X connect 10 0 1 0;
+#X connect 12 0 11 0;
+#X connect 14 0 1 0;
+#X connect 15 0 1 0;
+#X connect 16 0 1 0;
+#X connect 16 1 19 0;
+#X connect 17 0 1 0;
+#X connect 17 1 15 0;
+#X connect 18 0 1 0;
+#X connect 19 0 1 0;
